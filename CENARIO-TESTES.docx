@@ -1,0 +1,170 @@
+Documento de Cenários de Testes
+Projeto: Teste QA 31/03/2025
+Data: 31/03/2025
+Versão do Documento: 1.0
+Responsável: Alessandro Cordella, Danilo Goes, Victor Nunes 
+
+Objetivo
+Este documento descreve os cenários de testes que serão realizados para garantir a qualidade do sistema [Nome do Sistema]. Os testes serão divididos entre as seguintes categorias:
+
+Teste Unitário
+
+Teste de Usabilidade
+
+Teste de Performance
+
+O objetivo é validar as funcionalidades de baixo nível, a experiência do usuário e a performance geral do sistema, garantindo que o software atenda aos requisitos técnicos e ofereça uma boa experiência ao usuário.
+
+Serão desenvolvidos no mínimo 10 testes, distribuídos nas três categorias mencionadas.
+
+Cenários de Testes
+Testes Unitários
+Cenário de Teste: Validação de Função de Cálculo de Impostos
+
+Objetivo: Validar se a função de cálculo de impostos está funcionando corretamente.
+
+Passos:
+
+Inserir um valor de compra e uma taxa de imposto.
+
+Verificar o valor do imposto calculado.
+
+Resultado Esperado: O valor do imposto deve ser correto conforme a taxa inserida.
+
+Cenário de Teste: Validação de Função de Cadastro de Usuário
+
+Objetivo: Testar a funcionalidade do cadastro de novos usuários no sistema.
+
+Passos:
+
+Inserir dados válidos para um novo usuário.
+
+Verificar se o usuário foi registrado corretamente no banco de dados.
+
+Resultado Esperado: O sistema deve adicionar o novo usuário com todos os dados corretamente salvos.
+
+Cenário de Teste: Teste de Validação de Formulário
+
+Objetivo: Verificar a validação de campos obrigatórios em um formulário de cadastro.
+
+Passos:
+
+Submeter o formulário sem preencher todos os campos obrigatórios.
+
+Verificar se o sistema retorna erros de validação para os campos ausentes.
+
+Resultado Esperado: O sistema deve sinalizar corretamente os campos obrigatórios não preenchidos.
+
+Cenário de Teste: Teste de Função de Login
+
+Objetivo: Validar a função de autenticação de usuários.
+
+Passos:
+
+Inserir um usuário e senha válidos.
+
+Verificar se o login é bem-sucedido.
+
+Resultado Esperado: O usuário deve ser autenticado e redirecionado para a página inicial.
+
+Cenário de Teste: Teste de Cálculo de Desconto
+
+Objetivo: Verificar se a função de cálculo de desconto funciona corretamente.
+
+Passos:
+
+Inserir um valor de compra e uma porcentagem de desconto.
+
+Verificar o valor final após a aplicação do desconto.
+
+Resultado Esperado: O valor final após o desconto deve ser calculado corretamente.
+
+Testes de Usabilidade
+Cenário de Teste: Navegação no Menu Principal
+
+Objetivo: Verificar se o menu de navegação é intuitivo e fácil de usar.
+
+Passos:
+
+Acessar o sistema.
+
+Navegar entre diferentes seções usando o menu principal.
+
+Resultado Esperado: O menu deve ser fácil de navegar e as seções devem carregar sem erros.
+
+Cenário de Teste: Acessibilidade das Funcionalidades
+
+Objetivo: Garantir que as funcionalidades do sistema sejam acessíveis para todos os usuários, incluindo aqueles com deficiência.
+
+Passos:
+
+Testar a navegação utilizando teclado apenas (sem mouse).
+
+Testar se leitores de tela funcionam corretamente em campos e botões.
+
+Resultado Esperado: O sistema deve ser acessível e utilizável sem a necessidade de mouse.
+
+Cenário de Teste: Teste de Clareza nas Mensagens de Erro
+
+Objetivo: Avaliar se as mensagens de erro são claras e informativas para os usuários.
+
+Passos:
+
+Inserir dados inválidos em um formulário.
+
+Verificar as mensagens de erro exibidas.
+
+Resultado Esperado: As mensagens de erro devem ser claras, indicando o problema e sugerindo a ação correta.
+
+Cenário de Teste: Facilidade de Cadastro de Usuário
+
+Objetivo: Verificar a facilidade do processo de cadastro para o usuário final.
+
+Passos:
+
+Acessar a página de cadastro.
+
+Preencher os dados obrigatórios e submeter o formulário.
+
+Resultado Esperado: O processo de cadastro deve ser simples e rápido, com instruções claras.
+
+Testes de Performance
+Cenário de Teste: Tempo de Carregamento da Página Inicial
+
+Objetivo: Verificar o tempo de resposta ao acessar a página inicial.
+
+Passos:
+
+Acessar a página inicial do sistema.
+
+Medir o tempo de carregamento da página.
+
+Resultado Esperado: O tempo de carregamento deve ser inferior a 3 segundos.
+
+Cenário de Teste: Performance sob Carga de Usuários Simultâneos
+
+Objetivo: Avaliar a performance do sistema quando múltiplos usuários acessam o sistema ao mesmo tempo.
+
+Passos:
+
+Simular o acesso simultâneo de múltiplos usuários.
+
+Monitorar a resposta do sistema e o tempo de carregamento.
+
+Resultado Esperado: O sistema deve manter um desempenho adequado, mesmo sob carga elevada de usuários.
+
+Cenário de Teste: Teste de Consumo de Recursos (CPU e Memória)
+
+Objetivo: Avaliar o consumo de recursos do sistema durante sua operação.
+
+Passos:
+
+Monitorar o consumo de CPU e memória enquanto o sistema está sendo utilizado.
+
+Analisar o impacto do sistema em termos de consumo de recursos.
+
+Resultado Esperado: O sistema deve operar de forma eficiente, com um consumo de recursos dentro dos limites razoáveis.
+
+Conclusão
+Esses cenários de testes garantem que o sistema seja testado de forma abrangente, abordando os aspectos de funcionalidade, usabilidade e performance. A execução dos testes ajudará a garantir que o sistema seja robusto, fácil de usar e capaz de lidar com diferentes condições de carga e utilização.
+
