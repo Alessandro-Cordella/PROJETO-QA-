@@ -1,11 +1,12 @@
 Documento de Cenários de Testes
-Projeto: Teste QA 31/03/2025
-Data: 31/03/2025
-Versão do Documento: 1.0
-Responsável: Alessandro Cordella, Danilo Goes, Victor Nunes 
+
+Projeto: Jogo Luta
+Data: 07/04/2025
+Versão do Documento: 1.5
+Responsável: Alessandro Cordella, Danilo Goes, Victor Nunes
 
 Objetivo
-Este documento descreve os cenários de testes que serão realizados para garantir a qualidade do sistema [Nome do Sistema]. Os testes serão divididos entre as seguintes categorias:
+Este documento descreve os cenários de testes que serão realizados para garantir a qualidade do jogo Jogo Multiplayer 1v1 2D Conexão Local. Os testes serão divididos entre as seguintes categorias:
 
 Teste Unitário
 
@@ -13,158 +14,124 @@ Teste de Usabilidade
 
 Teste de Performance
 
-O objetivo é validar as funcionalidades de baixo nível, a experiência do usuário e a performance geral do sistema, garantindo que o software atenda aos requisitos técnicos e ofereça uma boa experiência ao usuário.
+O objetivo é validar as funcionalidades de baixo nível, a experiência do jogador e a performance geral do jogo, garantindo que o jogo atenda aos requisitos técnicos e ofereça uma boa experiência ao usuário. O jogo será desenvolvido utilizando as frameworks Godot e Unity, com diversos ambientes, objetos interativos e super ataques.
 
 Serão desenvolvidos no mínimo 10 testes, distribuídos nas três categorias mencionadas.
 
 Cenários de Testes
 Testes Unitários
-Cenário de Teste: Validação de Função de Cálculo de Impostos
-
-Objetivo: Validar se a função de cálculo de impostos está funcionando corretamente.
-
+Cenário de Teste: Validação de Função de Movimento do Jogador
+Objetivo: Validar se a função de movimento do jogador funciona corretamente.
 Passos:
 
-Inserir um valor de compra e uma taxa de imposto.
+Jogador 1 se move para a direita e esquerda.
 
-Verificar o valor do imposto calculado.
+Verificar se o jogador responde de forma precisa aos controles.
 
-Resultado Esperado: O valor do imposto deve ser correto conforme a taxa inserida.
+Jogador 1 pula para verificar se a ação de pulo também é funcional.
+Resultado Esperado: O jogador deve se mover corretamente nas direções especificadas e responder ao comando de pulo.
 
-Cenário de Teste: Validação de Função de Cadastro de Usuário
-
-Objetivo: Testar a funcionalidade do cadastro de novos usuários no sistema.
-
+Cenário de Teste: Validação de Função de Ataque
+Objetivo: Validar se o sistema de ataques (padrão e super ataque) funciona corretamente.
 Passos:
 
-Inserir dados válidos para um novo usuário.
+Jogador 1 executa um ataque padrão.
 
-Verificar se o usuário foi registrado corretamente no banco de dados.
+Jogador 1 executa um super ataque.
 
-Resultado Esperado: O sistema deve adicionar o novo usuário com todos os dados corretamente salvos.
+Verificar se o ataque acerta o oponente e causa dano adequado.
+Resultado Esperado: Os ataques devem acertar o oponente corretamente e causar a quantidade esperada de dano.
 
-Cenário de Teste: Teste de Validação de Formulário
-
-Objetivo: Verificar a validação de campos obrigatórios em um formulário de cadastro.
-
+Cenário de Teste: Validação de Colisão entre Jogadores
+Objetivo: Testar se o sistema de colisões entre os jogadores está funcionando corretamente.
 Passos:
 
-Submeter o formulário sem preencher todos os campos obrigatórios.
+Jogador 1 e Jogador 2 se encontram em uma área de colisão.
 
-Verificar se o sistema retorna erros de validação para os campos ausentes.
+Verificar se a colisão é detectada e as ações subsequentes acontecem corretamente (deslocamento, dano, etc.).
+Resultado Esperado: O sistema deve detectar as colisões e reagir de maneira apropriada.
 
-Resultado Esperado: O sistema deve sinalizar corretamente os campos obrigatórios não preenchidos.
-
-Cenário de Teste: Teste de Função de Login
-
-Objetivo: Validar a função de autenticação de usuários.
-
+Cenário de Teste: Validação de Modo Multiplayer
+Objetivo: Testar o funcionamento do jogo em modo multiplayer local 1v1.
 Passos:
 
-Inserir um usuário e senha válidos.
+Iniciar o jogo com dois jogadores conectados localmente.
 
-Verificar se o login é bem-sucedido.
+Ambos os jogadores devem ser capazes de controlar seus respectivos personagens de maneira independente.
 
-Resultado Esperado: O usuário deve ser autenticado e redirecionado para a página inicial.
+Verificar se a troca de turnos e a interação entre os jogadores funcionam sem falhas.
+Resultado Esperado: O jogo deve permitir que ambos os jogadores interajam de forma fluida e sem atrasos.
 
-Cenário de Teste: Teste de Cálculo de Desconto
-
-Objetivo: Verificar se a função de cálculo de desconto funciona corretamente.
-
+Cenário de Teste: Validação de Desempenho do Super Ataque
+Objetivo: Validar a ativação e execução do super ataque no momento correto.
 Passos:
 
-Inserir um valor de compra e uma porcentagem de desconto.
+Jogador 1 acumula energia para o super ataque.
 
-Verificar o valor final após a aplicação do desconto.
-
-Resultado Esperado: O valor final após o desconto deve ser calculado corretamente.
+Jogador 1 executa o super ataque e verifica se ele atinge o oponente corretamente.
+Resultado Esperado: O super ataque deve ser ativado somente quando as condições forem atendidas e o dano deve ser proporcional ao efeito.
 
 Testes de Usabilidade
-Cenário de Teste: Navegação no Menu Principal
-
-Objetivo: Verificar se o menu de navegação é intuitivo e fácil de usar.
-
+Cenário de Teste: Navegação pelo Menu Inicial
+Objetivo: Verificar se o menu inicial é intuitivo e fácil de navegar.
 Passos:
 
-Acessar o sistema.
+Acessar o menu inicial do jogo.
 
-Navegar entre diferentes seções usando o menu principal.
+Navegar entre opções como "Iniciar Jogo", "Opções", "Sair", etc.
+Resultado Esperado: O menu deve ser fácil de navegar, com respostas rápidas e sem erros.
 
-Resultado Esperado: O menu deve ser fácil de navegar e as seções devem carregar sem erros.
-
-Cenário de Teste: Acessibilidade das Funcionalidades
-
-Objetivo: Garantir que as funcionalidades do sistema sejam acessíveis para todos os usuários, incluindo aqueles com deficiência.
-
+Cenário de Teste: Acessibilidade das Funções do Jogo
+Objetivo: Garantir que as funcionalidades do jogo sejam acessíveis para todos os jogadores.
 Passos:
 
-Testar a navegação utilizando teclado apenas (sem mouse).
+Testar o jogo utilizando apenas teclado (sem mouse).
 
-Testar se leitores de tela funcionam corretamente em campos e botões.
+Testar a funcionalidade de todos os controles e botões com apenas o teclado.
+Resultado Esperado: O jogo deve ser totalmente jogável utilizando apenas o teclado, sem a necessidade de mouse.
 
-Resultado Esperado: O sistema deve ser acessível e utilizável sem a necessidade de mouse.
-
-Cenário de Teste: Teste de Clareza nas Mensagens de Erro
-
-Objetivo: Avaliar se as mensagens de erro são claras e informativas para os usuários.
-
+Cenário de Teste: Clareza nas Mensagens de Erro
+Objetivo: Avaliar se as mensagens de erro são claras e informativas para o jogador.
 Passos:
 
-Inserir dados inválidos em um formulário.
+Simular um erro, como um controle não funcionando ou um problema de conexão.
 
 Verificar as mensagens de erro exibidas.
+Resultado Esperado: As mensagens de erro devem ser claras, indicando o problema e sugerindo uma ação corretiva.
 
-Resultado Esperado: As mensagens de erro devem ser claras, indicando o problema e sugerindo a ação correta.
-
-Cenário de Teste: Facilidade de Cadastro de Usuário
-
-Objetivo: Verificar a facilidade do processo de cadastro para o usuário final.
-
+Cenário de Teste: Facilidade de Controle dos Personagens
+Objetivo: Verificar se os controles do personagem são intuitivos e fáceis de usar.
 Passos:
 
-Acessar a página de cadastro.
+Jogador 1 e Jogador 2 utilizam os controles para se mover, atacar e pular.
 
-Preencher os dados obrigatórios e submeter o formulário.
-
-Resultado Esperado: O processo de cadastro deve ser simples e rápido, com instruções claras.
+Avaliar a facilidade de uso e a resposta dos controles durante a partida.
+Resultado Esperado: Os controles devem ser responsivos, fáceis de usar e oferecer uma boa experiência ao jogador.
 
 Testes de Performance
-Cenário de Teste: Tempo de Carregamento da Página Inicial
-
-Objetivo: Verificar o tempo de resposta ao acessar a página inicial.
-
+Cenário de Teste: Tempo de Carregamento do Jogo
+Objetivo: Verificar o tempo de resposta ao acessar o jogo.
 Passos:
 
-Acessar a página inicial do sistema.
+Acessar o jogo e medir o tempo de carregamento desde o lançamento até o menu inicial.
+Resultado Esperado: O tempo de carregamento não deve ultrapassar 10 segundos.
 
-Medir o tempo de carregamento da página.
-
-Resultado Esperado: O tempo de carregamento deve ser inferior a 3 segundos.
-
-Cenário de Teste: Performance sob Carga de Usuários Simultâneos
-
-Objetivo: Avaliar a performance do sistema quando múltiplos usuários acessam o sistema ao mesmo tempo.
-
+Cenário de Teste: Performance com Dois Jogadores Simultâneos
+Objetivo: Avaliar a performance do jogo quando dois jogadores estão jogando simultaneamente.
 Passos:
 
-Simular o acesso simultâneo de múltiplos usuários.
+Jogar uma partida com dois jogadores conectados localmente.
 
-Monitorar a resposta do sistema e o tempo de carregamento.
-
-Resultado Esperado: O sistema deve manter um desempenho adequado, mesmo sob carga elevada de usuários.
+Monitorar a performance (taxa de quadros por segundo e eventuais travamentos).
+Resultado Esperado: O jogo deve manter uma taxa de quadros constante (idealmente 60 FPS) e não deve apresentar travamentos ou lags.
 
 Cenário de Teste: Teste de Consumo de Recursos (CPU e Memória)
-
-Objetivo: Avaliar o consumo de recursos do sistema durante sua operação.
-
+Objetivo: Avaliar o consumo de recursos do sistema enquanto o jogo está em execução.
 Passos:
 
-Monitorar o consumo de CPU e memória enquanto o sistema está sendo utilizado.
-
-Analisar o impacto do sistema em termos de consumo de recursos.
-
-Resultado Esperado: O sistema deve operar de forma eficiente, com um consumo de recursos dentro dos limites razoáveis.
+Monitorar o consumo de CPU e memória durante uma partida 1v1 com dois jogadores.
+Resultado Esperado: O consumo de recursos deve estar dentro de níveis aceitáveis, sem impacto negativo no desempenho do jogo.
 
 Conclusão
-Esses cenários de testes garantem que o sistema seja testado de forma abrangente, abordando os aspectos de funcionalidade, usabilidade e performance. A execução dos testes ajudará a garantir que o sistema seja robusto, fácil de usar e capaz de lidar com diferentes condições de carga e utilização.
+Esses cenários de testes garantem que o jogo Jogo Multiplayer 1v1 2D Conexão Local seja testado de forma abrangente, abordando os aspectos de funcionalidade, usabilidade e performance. A execução dos testes ajudará a garantir que o jogo seja divertido, responsivo e capaz de proporcionar uma experiência sólida e fluida para os jogadores.
 
