@@ -1,137 +1,68 @@
-Documento de Cenários de Testes
 
-Projeto: Jogo Luta
-Data: 07/04/2025
-Versão do Documento: 1.5
-Responsável: Alessandro Cordella, Danilo Goes, Victor Nunes
+### 📄 Documento de Cenários de Testes  
+**Projeto:** Jogo Luta  
+**Data:** 07/04/2025  
+**Versão do Documento:** 1.5  
+**Responsáveis:** Alessandro Cordella, Danilo Goes, Victor Nunes  
 
-Objetivo
-Este documento descreve os cenários de testes que serão realizados para garantir a qualidade do jogo Jogo Multiplayer 1v1 2D Conexão Local. Os testes serão divididos entre as seguintes categorias:
+---
 
-Teste Unitário
+### 🎯 Objetivo  
+Este documento descreve os cenários de testes que serão realizados para garantir a qualidade do jogo *Jogo Multiplayer 1v1 2D Conexão Local*. Os testes estão organizados nas seguintes categorias:  
 
-Teste de Usabilidade
+- Teste Unitário  
+- Teste de Usabilidade  
+- Teste de Performance  
 
-Teste de Performance
+O objetivo é validar as funcionalidades de baixo nível, a experiência do jogador e a performance geral do jogo, garantindo que o jogo atenda aos requisitos técnicos e ofereça uma boa experiência ao usuário. O jogo será desenvolvido utilizando as frameworks **Godot** e **Unity**, com diversos ambientes, objetos interativos e super ataques.
 
-O objetivo é validar as funcionalidades de baixo nível, a experiência do jogador e a performance geral do jogo, garantindo que o jogo atenda aos requisitos técnicos e ofereça uma boa experiência ao usuário. O jogo será desenvolvido utilizando as frameworks Godot e Unity, com diversos ambientes, objetos interativos e super ataques.
+---
 
-Serão desenvolvidos no mínimo 10 testes, distribuídos nas três categorias mencionadas.
+### ✅ Cenários de Testes  
 
-Cenários de Testes
-Testes Unitários
-Cenário de Teste: Validação de Função de Movimento do Jogador
-Objetivo: Validar se a função de movimento do jogador funciona corretamente.
-Passos:
+#### 🧪 Testes Unitários  
+1. **Validação de Movimento do Jogador**  
+   - **Objetivo:** Verificar se o jogador se move corretamente para esquerda, direita e executa pulo.  
+   - **Resultado Esperado:** O personagem deve responder de forma precisa aos controles.
 
-Jogador 1 se move para a direita e esquerda.
+2. **Validação de Função de Ataque**  
+   - **Objetivo:** Verificar se os ataques (padrão e super ataque) funcionam e causam o dano correto.  
+   - **Resultado Esperado:** O oponente deve receber o dano esperado conforme o ataque.
 
-Verificar se o jogador responde de forma precisa aos controles.
+3. **Validação de Colisão entre Jogadores**  
+   - **Objetivo:** Confirmar se as colisões entre os jogadores são detectadas corretamente.  
+   - **Resultado Esperado:** O sistema deve detectar a colisão e aplicar os efeitos (ex: dano ou empurrão).
 
-Jogador 1 pula para verificar se a ação de pulo também é funcional.
-Resultado Esperado: O jogador deve se mover corretamente nas direções especificadas e responder ao comando de pulo.
+4. **Validação de Modo Multiplayer**  
+   - **Objetivo:** Testar o jogo local com dois jogadores simultâneos.  
+   - **Resultado Esperado:** Ambos os jogadores devem jogar simultaneamente e sem travamentos.
 
-Cenário de Teste: Validação de Função de Ataque
-Objetivo: Validar se o sistema de ataques (padrão e super ataque) funciona corretamente.
-Passos:
+---
 
-Jogador 1 executa um ataque padrão.
+#### 🧑‍💻 Testes de Usabilidade  
+5. **Navegação pelo Menu Inicial**  
+   - **Objetivo:** Avaliar se o menu inicial é intuitivo e funcional.  
+   - **Resultado Esperado:** Jogadores devem navegar facilmente pelas opções como “Iniciar Jogo”, “Opções” etc.
 
-Jogador 1 executa um super ataque.
+6. **Acessibilidade com Teclado**  
+   - **Objetivo:** Verificar se o jogo pode ser jogado apenas com o teclado.  
+   - **Resultado Esperado:** Todas as ações (movimento, ataque, pulo) devem funcionar sem uso do mouse.
 
-Verificar se o ataque acerta o oponente e causa dano adequado.
-Resultado Esperado: Os ataques devem acertar o oponente corretamente e causar a quantidade esperada de dano.
+7. **Clareza nas Mensagens de Erro**  
+   - **Objetivo:** Avaliar se mensagens de erro são informativas e úteis ao jogador.  
+   - **Resultado Esperado:** Mensagens devem indicar claramente o erro e como corrigi-lo.
 
-Cenário de Teste: Validação de Colisão entre Jogadores
-Objetivo: Testar se o sistema de colisões entre os jogadores está funcionando corretamente.
-Passos:
+---
 
-Jogador 1 e Jogador 2 se encontram em uma área de colisão.
+#### 🚀 Testes de Performance  
+8. **Tempo de Carregamento do Jogo**  
+   - **Objetivo:** Verificar quanto tempo o jogo leva para iniciar até o menu principal.  
+   - **Resultado Esperado:** O tempo de carregamento deve ser inferior a 10 segundos.
 
-Verificar se a colisão é detectada e as ações subsequentes acontecem corretamente (deslocamento, dano, etc.).
-Resultado Esperado: O sistema deve detectar as colisões e reagir de maneira apropriada.
+9. **Performance com Dois Jogadores Simultâneos**  
+   - **Objetivo:** Avaliar taxa de quadros e fluidez durante partida 1v1.  
+   - **Resultado Esperado:** O jogo deve rodar a 60 FPS estáveis e sem lags.
 
-Cenário de Teste: Validação de Modo Multiplayer
-Objetivo: Testar o funcionamento do jogo em modo multiplayer local 1v1.
-Passos:
-
-Iniciar o jogo com dois jogadores conectados localmente.
-
-Ambos os jogadores devem ser capazes de controlar seus respectivos personagens de maneira independente.
-
-Verificar se a troca de turnos e a interação entre os jogadores funcionam sem falhas.
-Resultado Esperado: O jogo deve permitir que ambos os jogadores interajam de forma fluida e sem atrasos.
-
-Cenário de Teste: Validação de Desempenho do Super Ataque
-Objetivo: Validar a ativação e execução do super ataque no momento correto.
-Passos:
-
-Jogador 1 acumula energia para o super ataque.
-
-Jogador 1 executa o super ataque e verifica se ele atinge o oponente corretamente.
-Resultado Esperado: O super ataque deve ser ativado somente quando as condições forem atendidas e o dano deve ser proporcional ao efeito.
-
-Testes de Usabilidade
-Cenário de Teste: Navegação pelo Menu Inicial
-Objetivo: Verificar se o menu inicial é intuitivo e fácil de navegar.
-Passos:
-
-Acessar o menu inicial do jogo.
-
-Navegar entre opções como "Iniciar Jogo", "Opções", "Sair", etc.
-Resultado Esperado: O menu deve ser fácil de navegar, com respostas rápidas e sem erros.
-
-Cenário de Teste: Acessibilidade das Funções do Jogo
-Objetivo: Garantir que as funcionalidades do jogo sejam acessíveis para todos os jogadores.
-Passos:
-
-Testar o jogo utilizando apenas teclado (sem mouse).
-
-Testar a funcionalidade de todos os controles e botões com apenas o teclado.
-Resultado Esperado: O jogo deve ser totalmente jogável utilizando apenas o teclado, sem a necessidade de mouse.
-
-Cenário de Teste: Clareza nas Mensagens de Erro
-Objetivo: Avaliar se as mensagens de erro são claras e informativas para o jogador.
-Passos:
-
-Simular um erro, como um controle não funcionando ou um problema de conexão.
-
-Verificar as mensagens de erro exibidas.
-Resultado Esperado: As mensagens de erro devem ser claras, indicando o problema e sugerindo uma ação corretiva.
-
-Cenário de Teste: Facilidade de Controle dos Personagens
-Objetivo: Verificar se os controles do personagem são intuitivos e fáceis de usar.
-Passos:
-
-Jogador 1 e Jogador 2 utilizam os controles para se mover, atacar e pular.
-
-Avaliar a facilidade de uso e a resposta dos controles durante a partida.
-Resultado Esperado: Os controles devem ser responsivos, fáceis de usar e oferecer uma boa experiência ao jogador.
-
-Testes de Performance
-Cenário de Teste: Tempo de Carregamento do Jogo
-Objetivo: Verificar o tempo de resposta ao acessar o jogo.
-Passos:
-
-Acessar o jogo e medir o tempo de carregamento desde o lançamento até o menu inicial.
-Resultado Esperado: O tempo de carregamento não deve ultrapassar 10 segundos.
-
-Cenário de Teste: Performance com Dois Jogadores Simultâneos
-Objetivo: Avaliar a performance do jogo quando dois jogadores estão jogando simultaneamente.
-Passos:
-
-Jogar uma partida com dois jogadores conectados localmente.
-
-Monitorar a performance (taxa de quadros por segundo e eventuais travamentos).
-Resultado Esperado: O jogo deve manter uma taxa de quadros constante (idealmente 60 FPS) e não deve apresentar travamentos ou lags.
-
-Cenário de Teste: Teste de Consumo de Recursos (CPU e Memória)
-Objetivo: Avaliar o consumo de recursos do sistema enquanto o jogo está em execução.
-Passos:
-
-Monitorar o consumo de CPU e memória durante uma partida 1v1 com dois jogadores.
-Resultado Esperado: O consumo de recursos deve estar dentro de níveis aceitáveis, sem impacto negativo no desempenho do jogo.
-
-Conclusão
-Esses cenários de testes garantem que o jogo Jogo Multiplayer 1v1 2D Conexão Local seja testado de forma abrangente, abordando os aspectos de funcionalidade, usabilidade e performance. A execução dos testes ajudará a garantir que o jogo seja divertido, responsivo e capaz de proporcionar uma experiência sólida e fluida para os jogadores.
-
+10. **Consumo de CPU e Memória**  
+   - **Objetivo:** Monitorar o uso de recursos do sistema durante o jogo.  
+   - **Resultado Esperado:** Consumo dentro dos limites aceitáveis, sem afetar o desempenho.
