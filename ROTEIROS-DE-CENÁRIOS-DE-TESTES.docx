@@ -1,138 +1,177 @@
 
-
-**Roteiro de Testes e Bug Report**
-
-**Projeto:** Jogo de Luta  
+### 🎮 **Roteiro de Execução de Testes – Jogo Multiplayer 1v1 2D Conexão Local**  
+**Versão do Jogo:** 1.5  
 **Data:** 07/04/2025  
-**Versão do Documento:** 1.0  
-**Responsável:** Alessandro Cordella, Danilo Goes, Victor Nunes  
+**Responsáveis:** Alessandro Cordella, Danilo Goes, Victor Nunes  
 
 ---
 
- **Objetivo**
-Este documento descreve o roteiro de testes que será executado para verificar a funcionalidade do **Jogo de Luta**. A seguir, será apresentado o passo a passo para cada cenário de teste, com orientações para registrar erros (bugs) encontrados durante a execução dos testes. Cada bug encontrado será documentado em um **Bug Report**.
-
- **Estrutura do Bug Report**
-Cada bug encontrado durante os testes deve ser registrado com as seguintes informações:
-
-- **Título do Bug:** Breve descrição do problema.
-- **Descrição:** Detalhamento completo do bug, incluindo as circunstâncias em que ocorreu.
-- **Passos para Reproduzir:** Passos claros e precisos para reproduzir o problema.
-- **Resultado Esperado:** O comportamento esperado do sistema.
-- **Resultado Obtido:** O comportamento real do sistema.
-- **Gravidade:** A gravidade do bug (Crítico, Alto, Médio, Baixo).
-- **Data de Reporte:** A data em que o bug foi identificado.
-- **Responsável:** Quem executou o teste e reportou o bug.
+#### 🧪 **Testes Unitários**
 
 ---
 
- **Cenários de Testes**
+**1. Validação de Movimento do Jogador**  
+**Passos:**  
+- Iniciar o jogo.  
+- Usar teclas ←, → e barra de espaço.  
+- Observar movimentos laterais e pulo.  
 
- **Testes Unitários**
+**Resultado Esperado:**  
+Movimentos devem ser suaves, sem delay.
 
-1. **Cenário de Teste:** Validação de Função de Movimento do Jogador  
-   **Objetivo:** Validar se a função de movimento do jogador funciona corretamente.  
-   **Passos:**
-   - Passo 1: Iniciar o jogo e carregar o nível com o Jogador 1.
-   - Passo 2: Movimentar o Jogador 1 para a direita e esquerda usando os controles.
-   - Passo 3: Verificar se o movimento ocorre corretamente e de forma fluida.
-   - Passo 4: Testar a função de pulo, pressionando o botão correspondente.
-   - Passo 5: Observar se o jogador realiza o pulo corretamente, sem erros de animação ou física.
-   **Resultado Esperado:** O jogador deve se mover com precisão e responder corretamente aos controles, incluindo o pulo.
+**🛠️ Bug Report:**  
+- Bug encontrado? ( ) Sim ( ) Não  
+- Descrição:  
+- Gravidade: ( ) Baixa ( ) Média ( ) Alta  
+- Status: ( ) Corrigido ( ) Em Análise ( ) Aberto  
 
-   **Bug Report (Exemplo):**
-   - **Título do Bug:** Jogador não responde ao comando de pulo.
-   - **Descrição:** Após pressionar o botão de pulo, o Jogador 1 não realiza a animação de pulo e permanece no chão.
-   - **Passos para Reproduzir:**  
-     1. Iniciar o jogo.
-     2. Movimentar o jogador para a direita ou esquerda.
-     3. Pressionar o botão de pulo.
-   - **Resultado Esperado:** O jogador deve pular quando o botão de pulo é pressionado.
-   - **Resultado Obtido:** O jogador permanece no chão, sem realizar o pulo.
-   - **Gravidade:** Alta
-   - **Data de Reporte:** 07/04/2025
+---
 
-2. **Cenário de Teste:** Validação de Função de Ataque  
-   **Objetivo:** Validar se o sistema de ataques (padrão e super ataque) funciona corretamente.  
-   **Passos:**
-   - Passo 1: Iniciar o jogo com o Jogador 1.
-   - Passo 2: Executar um ataque padrão pressionando o botão de ataque.
-   - Passo 3: Verificar se o ataque acerta o oponente e causa dano adequado.
-   - Passo 4: Executar o super ataque, pressionando o botão de super ataque.
-   - Passo 5: Verificar se o super ataque acerta o oponente e causa dano elevado.
-   **Resultado Esperado:** O ataque padrão e o super ataque devem causar dano ao oponente, com efeitos visíveis de dano.
+**2. Validação de Função de Ataque**  
+**Passos:**  
+- Atacar com botão normal (ex: A).  
+- Acumular energia e usar super ataque (ex: S).  
 
-   **Bug Report (Exemplo):**
-   - **Título do Bug:** Super ataque não causa dano.
-   - **Descrição:** O super ataque é ativado corretamente, mas não causa dano ao oponente.
-   - **Passos para Reproduzir:**  
-     1. Iniciar o jogo.
-     2. Acumular energia para o super ataque.
-     3. Executar o super ataque.
-   - **Resultado Esperado:** O super ataque deve causar dano elevado ao oponente.
-   - **Resultado Obtido:** O super ataque é executado, mas não causa dano.
-   - **Gravidade:** Alta
-   - **Data de Reporte:** 07/04/2025
+**Resultado Esperado:**  
+Ataques devem causar o dano correto.
 
- **Testes de Usabilidade**
+**🛠️ Bug Report:**  
+- Bug encontrado? ( ) Sim ( ) Não  
+- Descrição:  
+- Gravidade:  
+- Status:
 
-3. **Cenário de Teste:** Navegação pelo Menu Inicial  
-   **Objetivo:** Verificar se o menu inicial é intuitivo e fácil de navegar.  
-   **Passos:**
-   - Passo 1: Iniciar o jogo e acessar o menu inicial.
-   - Passo 2: Navegar pelas opções "Iniciar Jogo", "Opções", "Sair".
-   - Passo 3: Testar as transições entre as opções para garantir que as mudanças de tela ocorram sem erros.
-   **Resultado Esperado:** O menu deve ser fácil de navegar, com transições suaves entre as opções.
+---
 
-   **Bug Report (Exemplo):**
-   - **Título do Bug:** O menu não responde ao pressionar "Iniciar Jogo".
-   - **Descrição:** Ao pressionar "Iniciar Jogo", a tela não muda para o nível de jogo.
-   - **Passos para Reproduzir:**  
-     1. Iniciar o jogo.
-     2. Acessar o menu inicial e pressionar "Iniciar Jogo".
-   - **Resultado Esperado:** A tela deve carregar o nível do jogo.
-   - **Resultado Obtido:** A tela permanece no menu, sem carregar o nível.
-   - **Gravidade:** Média
-   - **Data de Reporte:** 07/04/2025
+**3. Validação de Colisão entre Jogadores**  
+**Passos:**  
+- Aproximar os dois jogadores.  
+- Verificar se colisão é detectada.  
 
-4. **Cenário de Teste:** Acessibilidade das Funções do Jogo  
-   **Objetivo:** Garantir que as funcionalidades do jogo sejam acessíveis para todos os jogadores.  
-   **Passos:**
-   - Passo 1: Testar o jogo utilizando apenas teclado (sem mouse).
-   - Passo 2: Navegar pelas opções e controlar os personagens com o teclado.
-   **Resultado Esperado:** O jogo deve ser jogável com o teclado, sem a necessidade de mouse.
+**Resultado Esperado:**  
+Sistema deve reagir (ex: empurrar, causar dano).
 
-   **Bug Report (Exemplo):**
-   - **Título do Bug:** O jogador não consegue pular usando o teclado.
-   - **Descrição:** O botão de pulo não está funcionando ao usar apenas o teclado.
-   - **Passos para Reproduzir:**  
-     1. Iniciar o jogo.
-     2. Tentar pular usando o teclado.
-   - **Resultado Esperado:** O jogador deve ser capaz de pular usando o teclado.
-   - **Resultado Obtido:** O personagem não realiza o pulo ao pressionar a tecla de pulo.
-   - **Gravidade:** Alta
-   - **Data de Reporte:** 07/04/2025
+**🛠️ Bug Report:**  
+- Bug encontrado? ( ) Sim ( ) Não  
+- Descrição:  
+- Gravidade:  
+- Status:
 
-Testes de Performance
+---
 
-5. **Cenário de Teste:** Tempo de Carregamento do Jogo  
-   **Objetivo:** Verificar o tempo de resposta ao acessar o jogo.  
-   **Passos:**
-   - Passo 1: Iniciar o jogo.
-   - Passo 2: Medir o tempo de carregamento do menu inicial.
-   **Resultado Esperado:** O jogo deve carregar o menu inicial em menos de 10 segundos.
+**4. Validação de Modo Multiplayer**  
+**Passos:**  
+- Iniciar partida com 2 jogadores locais.  
+- Jogar por 2 minutos.  
 
-   **Bug Report (Exemplo):**
-   - **Título do Bug:** Tempo de carregamento superior a 10 segundos.
-   - **Descrição:** O jogo está demorando mais de 10 segundos para carregar o menu inicial.
-   - **Passos para Reproduzir:**  
-     1. Iniciar o jogo.
-     2. Medir o tempo até o carregamento completo do menu inicial.
-   - **Resultado Esperado:** O menu deve carregar em menos de 10 segundos.
-   - **Resultado Obtido:** O menu demora mais de 15 segundos para carregar.
-   - **Gravidade:** Média
-   - **Data de Reporte:** 07/04/2025
+**Resultado Esperado:**  
+Ambos controlam seus personagens sem falhas.
 
- **Conclusão**
+**🛠️ Bug Report:**  
+- Bug encontrado? ( ) Sim ( ) Não  
+- Descrição:  
+- Gravidade:  
+- Status:
 
-Este documento de **Roteiro de Testes e Bug Report** fornece um guia completo para a execução dos testes no **Jogo Multiplayer 1v1 2D Conexão Local**, detalhando os passos a serem seguidos e a estrutura para reportar qualquer erro encontrado. O objetivo é garantir que o jogo seja funcional, acessível e ofereça uma experiência de alta qualidade aos jogadores.
+---
+
+#### 🧑‍💻 **Testes de Usabilidade**
+
+---
+
+**5. Navegação pelo Menu Inicial**  
+**Passos:**  
+- Acessar o jogo.  
+- Navegar pelas opções do menu.  
+
+**Resultado Esperado:**  
+Menu funcional, intuitivo e responsivo.
+
+**🛠️ Bug Report:**  
+- Bug encontrado? ( ) Sim ( ) Não  
+- Descrição:  
+- Gravidade:  
+- Status:
+
+---
+
+**6. Acessibilidade com Teclado**  
+**Passos:**  
+- Usar só teclado para navegar e jogar.  
+
+**Resultado Esperado:**  
+Todas as ações devem funcionar sem mouse.
+
+**🛠️ Bug Report:**  
+- Bug encontrado? ( ) Sim ( ) Não  
+- Descrição:  
+- Gravidade:  
+- Status:
+
+---
+
+**7. Clareza nas Mensagens de Erro**  
+**Passos:**  
+- Simular erro (ex: ação inválida).  
+- Observar mensagem exibida.  
+
+**Resultado Esperado:**  
+Mensagem clara, orientando o jogador.
+
+**🛠️ Bug Report:**  
+- Bug encontrado? ( ) Sim ( ) Não  
+- Descrição:  
+- Gravidade:  
+- Status:
+
+---
+
+#### 🚀 **Testes de Performance**
+
+---
+
+**8. Tempo de Carregamento do Jogo**  
+**Passos:**  
+- Iniciar o jogo.  
+- Cronometrar até o menu inicial.  
+
+**Resultado Esperado:**  
+Carregamento em até 10 segundos.
+
+**🛠️ Bug Report:**  
+- Bug encontrado? ( ) Sim ( ) Não  
+- Descrição:  
+- Gravidade:  
+- Status:
+
+---
+
+**9. Performance com Dois Jogadores Simultâneos**  
+**Passos:**  
+- Jogar partida com 2 jogadores.  
+- Monitorar fluidez e FPS.  
+
+**Resultado Esperado:**  
+60 FPS estáveis, sem travamentos.
+
+**🛠️ Bug Report:**  
+- Bug encontrado? ( ) Sim ( ) Não  
+- Descrição:  
+- Gravidade:  
+- Status:
+
+---
+
+**10. Consumo de CPU e Memória**  
+**Passos:**  
+- Jogar com monitoramento de recursos.  
+- Observar CPU e RAM durante 5 min.  
+
+**Resultado Esperado:**  
+Consumo aceitável, sem quedas de performance.
+
+**🛠️ Bug Report:**  
+- Bug encontrado? ( ) Sim ( ) Não  
+- Descrição:  
+- Gravidade:  
+- Status:
